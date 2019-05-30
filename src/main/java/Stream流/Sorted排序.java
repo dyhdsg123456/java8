@@ -1,6 +1,6 @@
 package Stream流;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,15 +10,7 @@ import java.util.List;
  */
 public class Sorted排序 {
     public static void main(String[] args) {
-        List<String> stringCollection = new ArrayList<>();
-
-        stringCollection.add("ddd2");
-        stringCollection.add("aaa2");
-        stringCollection.add("bbb1");
-        stringCollection.add("aaa1");
-        stringCollection.add("bbb3");
-        stringCollection.add("ccc");
-        stringCollection.add("bbb2");
+        List<String> stringCollection = Arrays.asList("ddd2", "aaa2", "bbb1", "aaa1","bbb3","ccc","bbb2");
         //filter
         stringCollection.stream()
                         .sorted()

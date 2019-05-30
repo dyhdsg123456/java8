@@ -1,6 +1,6 @@
 package Stream流;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,14 +10,7 @@ import java.util.List;
  */
 public class Match匹配 {
     public static void main(String[] args) {
-        List<String> stringCollection = new ArrayList<>();
-        stringCollection.add("ddd2");
-        stringCollection.add("aaa2");
-        stringCollection.add("bbb1");
-        stringCollection.add("aaa1");
-        stringCollection.add("bbb3");
-        stringCollection.add("ccc");
-        stringCollection.add("bbb2");
+        List<String> stringCollection = Arrays.asList("ddd2", "aaa2", "bbb1", "aaa1","bbb3","ccc","bbb2");
         // 验证 list 中 string 是否有以 a 开头的, 匹配到第一个，即返回 true
         boolean anyStartsWithA  = stringCollection.stream().anyMatch((s) -> s.startsWith("a"));
         System.out.println(anyStartsWithA);
