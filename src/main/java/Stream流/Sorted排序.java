@@ -8,9 +8,10 @@ import java.util.List;
  * Date:   2019/5/30
  * Description:
  */
-public class Filter过滤 {
+public class Sorted排序 {
     public static void main(String[] args) {
         List<String> stringCollection = new ArrayList<>();
+
         stringCollection.add("ddd2");
         stringCollection.add("aaa2");
         stringCollection.add("bbb1");
@@ -19,7 +20,14 @@ public class Filter过滤 {
         stringCollection.add("ccc");
         stringCollection.add("bbb2");
         //filter
-        stringCollection.stream().filter((s)->s.startsWith("a")).forEach(System.out::println);
-
+        stringCollection.stream()
+                        .sorted()
+                        .filter((s -> s.startsWith("bb")))
+                        .forEach(System.out::println);
+       // sorted 不会对 原来stringCollection 做出任何改变
+        for (String s : stringCollection) {
+            System.out.println(s);
+        }
     }
+
 }
